@@ -99,3 +99,11 @@ export PATH=~/.npm-global/bin:$PATH
 On the command line, update your system variables:
 
 source ~/.profile
+
+### Node Error: resolve-url-loader: CSS error
+
+A .gitattributes file can look like this
+_.vcproj eol=crlf
+_.sh eol=lf
+add
+\*.scss eol=lf
