@@ -68,3 +68,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### ERROR-1
+
+You are running create-react-app 4.0.5 which is behind the latest release (5.0.0)
+
+### Error-2
+
+Error: EACCESS: permission denied, access '/usr/local/lib/node_modules'
+
+1. First check who owns the directory
+   ----> ls -la /usr/local/lib/node_modules
+
+2. Change the ownership
+   ---> sudo chown -R $USER /usr/local/lib/node_modules/
+   ---> sudo chown -R $USER /usr/local/bin/
+   ---> sudo chown -R $USER /usr/local/share/
+
+### Alternative
+
+Back up your computer. On the command line, in your home directory, create a directory for global installations:
+
+mkdir ~/.npm-global
+Configure npm to use the new directory path:
+
+npm config set prefix '~/.npm-global'
+In your preferred text editor, open or create the ~/.profile file and add this line:
+
+export PATH=~/.npm-global/bin:$PATH
+On the command line, update your system variables:
+
+source ~/.profile
