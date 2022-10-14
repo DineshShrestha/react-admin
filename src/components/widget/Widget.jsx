@@ -35,7 +35,10 @@ const Widget = ({ type }) => {
           icon: (
             <ShoppingCartOutlinedIcon
               className="icon"
-              style={{ color: "goldenrod", backgroundColor: "rgba(128, 165,32,0.2" }}
+              style={{
+                color: "goldenrod",
+                backgroundColor: "rgba(128, 165,32,0.2",
+              }}
             />
           ),
         };
@@ -91,7 +94,7 @@ const Widget = ({ type }) => {
         <span className="link">{data && data.link}</span>
       </div>
       <div className="right">
-        <div className="percentage">
+        <div className="percentage positive">
           <KeyboardArrowUpOutlinedIcon className="icon" />
           {diff} %
         </div>
